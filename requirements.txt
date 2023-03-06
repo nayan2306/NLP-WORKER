@@ -1,0 +1,15 @@
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1-py3-none-any.whl
+gensim==3.4.0
+matplotlib==3.6.2
+nltk==3.8.1
+numpy==1.24.1
+pandas==1.5.2
+spacy==3.4.4
+spacy-legacy==3.0.11
+spacy-loggers==1.0.4
+streamlit==1.16.0
+streamlit-tags==1.2.8
+sumy==0.11.0
+textblob==0.17.1
+urllib3==1.26.13
+
