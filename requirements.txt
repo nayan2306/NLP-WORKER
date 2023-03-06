@@ -12,4 +12,4 @@ streamlit-tags==1.2.8
 sumy==0.11.0
 textblob==0.17.1
 urllib3==1.26.13
-
+nltk.download('punkt')
