@@ -11,9 +11,8 @@ import spacy
 from spacy import displacy
 from collections import Counter
 import en_core_web_sm
+from googletrans import Translator
 nlp = en_core_web_sm.load()
-import nltk
-nltk.download('punkt')
 
 
 #Headings for Web Application
@@ -21,7 +20,7 @@ st.title("Natural Language Processing Web Application Example")
 st.subheader("What type of NLP service would you like to use?")
 
 #Picking what NLP task you want to do
-option = st.selectbox('NLP Service',('Sentiment Analysis', 'Entity Extraction', 'Text Summarization')) #option is stored in this variable
+option = st.selectbox('NLP Service',('Sentiment Analysis', 'Entity Extraction', 'Text Summarization','Machine Translation')) #option is stored in this variable
 
 #Textbox for text user is entering
 st.subheader("Enter the text you'd like to analyze.")
@@ -81,9 +80,23 @@ elif option == 'Entity Extraction':
     st.write("Personal Entities: " + str(entPerson))
     st.write("Date Entities: " + str(entDate))
     st.write("GPE Entities: " + str(entGPE))
+    
+# Machine Translation
+elif option == 'Machine Translation':
+    translator = Translator()
+    option = st.selectbox('Select language',('Hindi', 'Marathi')) 
+    if option == 'Hindi':
+        input_text = text
+        translated_text = translator.translate(input_text, src='en', dest='hi')
+        st.write(translated_text.text)
+    elif option == 'Marathi':
+        input_text = text
+        translated_text = translator.translate(input_text, src='en', dest='mr')
+        st.write(translated_text.text)
 
 #Text Summarization
 else:
     summWords = summarize(text)
     st.subheader("Summary")
     st.write(summWords)
+
