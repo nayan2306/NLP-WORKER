@@ -12,6 +12,8 @@ from spacy import displacy
 from collections import Counter
 import en_core_web_sm
 from googletrans import Translator
+import nltk
+nltk.download('punkt')
 nlp = en_core_web_sm.load()
 
 
