@@ -14,7 +14,7 @@ cffi
 chardet
 charset-normalizer
 click
-colorama=
+colorama
 commonmark
 confection
 contourpy
