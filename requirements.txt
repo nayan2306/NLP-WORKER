@@ -83,7 +83,7 @@ PyMySQL
 pyparsing
 pyresparser
 pyrsistent
-python-dateutil=
+python-dateutil
 pytz
 pytz-deprecation-shim
 regex
