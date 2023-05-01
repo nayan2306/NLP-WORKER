@@ -22,7 +22,7 @@ These libraries can be installed using pip.
 1. Clone the repository.
 2. Install the required libraries.
 3. Open a command prompt or terminal and navigate to the folder containing the code.
-4. Run the following command: `streamlit run app.py`
+4. Run the following command: `streamlit run main.py`
 5. The application will open in a new tab of your default web browser.
 
 ## Usage
