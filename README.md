@@ -45,7 +45,7 @@ This NLP task summarizes the input text and displays it in a separate section.
 
 This NLP task translates the input text from English to either Hindi or Marathi based on the user's selection. The translated text is displayed in a separate section.
 
-## Currently Supprot
+## Currently Support
   - English
   - Hindi
 
