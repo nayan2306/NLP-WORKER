@@ -32,7 +32,7 @@ fonttools
 frozendict
 fst-pso
 FuzzyTM
-gensim
+gensim==3.8.3
 gitdb
 GitPython
 html5lib
