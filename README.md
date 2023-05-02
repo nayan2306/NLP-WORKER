@@ -51,4 +51,4 @@ This NLP task translates the input text from English to either Hindi or Marathi 
 
 ## Acknowledgements
 
-This application was created using various NLP libraries and techniques, including TextBlob, NLTK, Gensim, Spacy, and Googletrans. The code is based on tutorials and examples from the documentation of these libraries.
+This application is created using various NLP libraries and techniques, including TextBlob, NLTK, Gensim, Spacy, and Googletrans. The code is based on tutorials and examples from the documentation of these libraries.
