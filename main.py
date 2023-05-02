@@ -42,7 +42,7 @@ def text_analyzer(my_text):
 def entity_analyzer(my_text):
     entities = []
     entityLabels = []
-    doc = nlph(my_text)
+    doc = nlpe(my_text)
     for ent in doc.ents:
         entities.append(ent.text)
         entityLabels.append(ent.label_)
