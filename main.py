@@ -14,8 +14,8 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
-nlph = spacy.load('xx_ent_wiki_sm')
-nlpe = spacy.load('en_core_web_sm')
+nlph = spacy.load('xx_ent_wiki_sm') #Hindi
+nlpe = spacy.load('en_core_web_sm') #English
 #---------------------------functions-------------------------
 
 #Function to take in dictionary of entities, type of entity, and returns specific entities of specific type
@@ -42,7 +42,7 @@ def text_analyzer(my_text):
 def entity_analyzer(my_text):
     entities = []
     entityLabels = []
-    doc = nlph(my_text)
+    doc = nlpe(my_text)
     for ent in doc.ents:
         entities.append(ent.text)
         entityLabels.append(ent.label_)
@@ -132,10 +132,15 @@ def main():
     st.sidebar.info("Use this tool to get the sentiment score, tokens , lemma, Named Entities and Summary of your text. It's the ultimate!")
     #langauge options
     language = st.sidebar.selectbox("Select Language", ("English", "Hindi"))
+    st.sidebar.subheader("About the Team")
+    st.sidebar.text("Pranav Bagade")
+    st.sidebar.text("Shreya Bhalgat")
+    st.sidebar.text("Nayan Chandak")
+    st.sidebar.text("Shrirang Godbole")
     #text input
     if language == "English":
             st.subheader("English Text")
-            raw_text = st.text_area("Your Text")
+            raw_text = st.text_area("Your Text","Text here")
             # tokenization
             if st.checkbox("Show Tokens and Lemma"):
                 st.subheader("Tokenize Your Text")
